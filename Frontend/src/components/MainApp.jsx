@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import "prismjs/themes/prism-tomorrow.css"; // Base theme
 import Editor from "react-simple-code-editor";
-import prism from "prismjs";
+import prism from "prismjs"; 
 
 // Import required languages for Prism.js
 import 'prismjs/components/prism-markup-templating.js';
@@ -35,7 +35,7 @@ import '../App.css';
 // Import icons
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IoLanguageSharp } from "react-icons/io5"; // Language icon
-import { MdContentCopy, MdDone, MdErrorOutline, MdSave } from "react-icons/md"; // Copy, Done, Error, Save icons
+import { MdContentCopy, MdDone, MdSave } from "react-icons/md"; // Copy, Done, Error, Save icons
 
 // Available languages for the editor and AI review
 const supportedLanguages = [
@@ -104,7 +104,7 @@ function MainApp() {
     setIsLoading(true);
     setReview('');
 
-    const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+    const backendURL = "/api";
 
     try {
       const response = await axios.post(`${backendURL}/ai/get-review`, {
@@ -272,7 +272,7 @@ function MainApp() {
           )}
           {!isLoading && !review && (
             <div className="empty-review-placeholder">
-              <p>Your code review will appear here. <br/>Type or paste your code on the left, select the language, and click "Review Code".</p>
+              <p>Your code review will appear here. <br/>Type or paste your code on the left, select the language, and click.</p>
             </div>
           )}
         </div>

@@ -26,7 +26,7 @@ function App(){
             </button>
         </div>
         <footer className="app-footer">
-            <p>&copy; {new Date().getFullYear()} CodeAmie. Crafted with AI.</p>
+            <p>&copy; {new Date().getFullYear()} DocQuery. Crafted with AI.</p>
         </footer>
     </div>
   );
@@ -34,7 +34,7 @@ function App(){
   const LoggedInView = () => (
     <div className="app-container">
       <header className="app-header">
-        <h1>CodeAmie</h1>
+        <h1>DocQuery</h1>
         {currentUser && (
           <div className="user-info">
             <span className="user-email" title={currentUser.email}>{currentUser.email}</span>
@@ -44,7 +44,7 @@ function App(){
       </header>
       <MainApp />
       <footer className="app-footer">
-        <p>&copy; {new Date().getFullYear()} CodeAmie. Crafted with AI.</p>
+        <p>&copy; {new Date().getFullYear()} DocQuery. Crafted with AI.</p>
       </footer>
     </div>
   );
