@@ -1,5 +1,6 @@
 # DocQuery - Your AI Code Review Assistant
 
+link : https://doc-query-alpha.vercel.app/
 DocQuery is a web application that leverages AI (via Google's Gemini model) to provide code reviews. Users can input code snippets, select the programming language, and receive feedback on code quality, best practices, potential bugs, and more.
 
 ## Features
